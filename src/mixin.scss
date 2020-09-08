@@ -1,0 +1,42 @@
+
+$width-xl: 1920px;
+$width-lg: 1280px;
+$width-md: 960px;
+$width-tablet: 780px;
+$width-sm: 420px;
+$width-mobile-compact: 320px;
+
+$headerHeight: 60px;
+$headerHeightMobile: 50px;
+
+
+
+$breakpoints: (
+  'xl': (max-width: $width-xl),
+  'lg': (max-width: $width-lg),
+  'md': (max-width: $width-md),
+  'tablet': (max-width: $width-tablet),
+  'sm': (max-width: $width-sm),
+  'mobile-compact': (max-width: $width-mobile-compact)        
+) !default;
+
+
+@mixin respond($breakpoint) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $breakpoint) {
+        // Prints a media query based on the value
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    // If the key doesn't exist in the map
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+    }
+}
+
+
+
+
+
