@@ -1,6 +1,6 @@
 @import './mixin.scss';
 
-.wrapper { max-width: $width-lg; margin: auto;}
+.wrapper { max-width: 1080px; margin: auto; padding-left: 4%; padding-right: 4%;;}
 
 
 #Intro {
@@ -17,18 +17,9 @@
 
 }
 
-header {
-  position: fixed;  top: 0; left: 0; right: 0;  ;
-  background-color: rgba(0,0,0,0.0); color: white;
-  .wrap-header {
-    display: flex; align-items: center; 
-    height: $headerHeight;
-  }
-  
-  .menu-item { 
-    font-size: 22px; font-weight: normal;  color: #ddd; 
-    margin: 0 20px; cursor: pointer; 
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
-  }
-  .menu-item:hover,.menu-item.selected { color: white; font-weight: bold; }
-}
+
+
+h1 { text-align: center; font-size: 4rem; margin: 0; padding: 40px 0; margin-bottom: 16px; }
+
+.Divider { margin: 50px 0;}
+.Divider > div {width: 58%; height: 1px; margin: auto; background-color: lightgray;;}

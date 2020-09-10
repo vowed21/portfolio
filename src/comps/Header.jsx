@@ -1,7 +1,8 @@
 import React from 'react'
+import '../styles/header.scss'
 
 const MENU_INTRO = 'Intro'
-const MENU_PROJECT = 'Project'
+const MENU_PROJECT = 'Projects'
 const MENU_OPENSOURCE = 'OpenSource'
 const MENU_ETC = 'ETC'
 const MENU_ABOUTME = 'AboutMe'
@@ -12,6 +13,8 @@ const HEADER_MODE_TRANSPARENT = 0
 const HEADER_MODE_ALPHA = 1
 const HEADER_MODE_FILLED = 2
 const ALPHA_FILLED = 0.85
+
+
 
 
 

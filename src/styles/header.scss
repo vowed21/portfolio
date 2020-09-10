@@ -1,0 +1,17 @@
+@import '../mixin.scss';
+
+header {
+  position: fixed;  top: 0; left: 0; right: 0; z-index: 1000; ;
+  background-color: rgba(0,0,0,0.0); color: white;
+  .wrap-header {
+    display: flex; align-items: center; 
+    height: $headerHeight;
+  }
+  
+  .menu-item { 
+    font-size: 22px; font-weight: normal;  color: #ccc; 
+    margin: 0 20px; cursor: pointer; 
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+  }
+  .menu-item:hover,.menu-item.selected { color: white; font-weight: bold; }
+}
