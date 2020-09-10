@@ -1,5 +1,7 @@
 @import '../mixin.scss';
 
+
+
 .ProjectItem {
   display: flex;
 
@@ -10,18 +12,18 @@
   .wrap-right { flex-grow: 1; }
   .wrap-title {
     display: flex; align-items: center; margin: 8px 0;
-    h3 { font-size: 1.8rem; margin: 0; font-weight: bold; line-height: 1;;}
+    h3 { font-size: 28px; margin: 0; font-weight: bold; line-height: 1;;}
     img { width: 60px; height: 60px; object-fit: cover; border-radius: 12px; margin-right: 8px; display: none;;}
   }
   p { white-space: pre-wrap;;}
-  .tags { color: #03a9f4; font-weight: bold; margin: 0;}
-  .desc { color: #333; line-height: 1.4; margin-bottom: 40px; font-size: 18px;}
+  .tags { color: #29b6f6; font-weight: bold; margin: 0;}
+  .desc { color: #333; line-height: 1.4; margin-bottom: 40px; font-size: 17px;}
 
 }
 
 
-.MyLink { margin: 16px 0;
-  a { color: #3f51b5; font-weight: bold; font-size: 20px; text-decoration: none; }
+.MyLink { margin: 12px 0;
+  a { color: #3f51b5; font-weight: bold; font-size: 18px; text-decoration: none; }
   i { color: gray; margin-right: 8px;}
   a:hover { text-decoration: underline;}
 }

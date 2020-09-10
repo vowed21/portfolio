@@ -25,7 +25,7 @@ export default class Header extends React.Component {
   state = {selectedMenu: menusArr[0]}
 
   
-  elProject; elOpenSource; elETC; elAboutMe; elContact;
+  elProject; elOpenSource; elETC; elAboutMe; elContact; elBody;
 
   initElements = () => {
     if(this.elProject == null){
@@ -34,6 +34,7 @@ export default class Header extends React.Component {
       this.elETC = document.querySelector('#'+MENU_ETC)
       this.elAboutMe = document.querySelector('#'+MENU_ABOUTME)
       this.elContact = document.querySelector('#'+MENU_CONTACT)
+      this.elBody = document.querySelector('body')
     }
   }
 
@@ -71,16 +72,47 @@ export default class Header extends React.Component {
       this.headerRef.current.style.backgroundColor = `rgba(0,0,0,${ALPHA_FILLED})`
     }
 
+    const {selectedMenu} = this.state
+
     //메뉴 선택표시 되게 해주자.
-    if(offset <= this.elProject.offsetTop - datum) {
-      this.setState({selectedMenu: MENU_INTRO})
+    //맨끝쯤에 왔다면, 무조건 CONTACT 메뉴다.
+    if(offset >= (this.elBody.clientHeight - window.innerHeight - 100)) {
+      if(selectedMenu !== MENU_CONTACT) {
+        this.setState({selectedMenu: MENU_CONTACT})
+      }
+    }
+    else if(offset <= this.elProject.offsetTop - datum) {
+      if(selectedMenu !== MENU_INTRO) {
+        this.setState({selectedMenu: MENU_INTRO})
+      }
     }
     else if(offset <= this.elOpenSource.offsetTop - datum) {
-      this.setState({selectedMenu: MENU_PROJECT})
+      if(selectedMenu !== MENU_PROJECT) {
+        this.setState({selectedMenu: MENU_PROJECT})
+      }
     }
     else if(offset <= this.elETC.offsetTop - datum) {
-      this.setState({selectedMenu: MENU_OPENSOURCE})
+      if(selectedMenu !== MENU_OPENSOURCE) {
+        this.setState({selectedMenu: MENU_OPENSOURCE})
+      }
     }
+    else if(offset <= this.elAboutMe.offsetTop - datum) {
+      if(selectedMenu !== MENU_ETC) {
+        this.setState({selectedMenu: MENU_ETC})
+      }
+    }
+    else if(offset <= this.elContact.offsetTop - datum) {
+      if(selectedMenu !== MENU_ABOUTME) {
+        this.setState({selectedMenu: MENU_ABOUTME})
+      }
+    }
+    else {
+      if(selectedMenu !== MENU_CONTACT) {
+        this.setState({selectedMenu: MENU_CONTACT})
+      }
+    }
+
+    
 
 
 
@@ -108,6 +140,8 @@ export default class Header extends React.Component {
 
 
   render() {
+
+    console.log('렌더러')
 
     return (
       <header ref={this.headerRef} >

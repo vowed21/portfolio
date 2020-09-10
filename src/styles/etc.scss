@@ -1,0 +1,35 @@
+@import '../mixin.scss';
+
+#ETC {
+  padding-bottom: 60px;;
+}
+.wrap-patent {
+  display: flex; justify-content: space-between; flex-wrap: wrap;;
+}
+.ETCItem {
+  width: 49%; box-sizing: border-box; position: relative; border: 1px solid #ddd; margin: 10px 0;;
+  img { object-fit: cover; width: 100%;;}
+  .wrap-desc {
+    position: absolute; left:0; right:0; bottom: 0; padding: 16px; padding-top: 40px;;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+    color: white; font-weight: bold;; font-size: 20px;
+  }
+}
+
+#AboutMe {
+  padding-bottom : 60px; text-align: center;
+  background-image: url('/portfolio/assets/blue_back.jpg');
+  background-position: center; background-size: cover;;;
+  color: white;
+  font-size: 20px; font-weight: bold;;;
+}
+
+#Contact {
+  padding-bottom: 100px;
+  background-color: #262626; color: white;  text-align: center;
+
+  p { font-size: 24px; font-weight: bold;;}
+  i { margin-right: 16px;}
+  a { color: white; text-decoration: none;}
+  a:hover { text-decoration: underline;}
+}

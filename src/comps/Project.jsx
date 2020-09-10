@@ -11,7 +11,7 @@ const Project = () => {
       <div className="wrapper">
         <h1>- PROJECTS -</h1>
         {myProjects.map((data, index) => (
-          <ProjectItem data={data} key={index} />
+          <ProjectItem data={data} key={index} showDivider={(index < myProjects.length-1)} />
         ))}      
       </div>
     </div>
@@ -19,7 +19,7 @@ const Project = () => {
 }
 
 
-const ProjectItem = ({data}) => {
+const ProjectItem = ({data, showDivider}) => {
   const {title, imgSrc, tags, desc, links } = data
   const src = process.env.PUBLIC_URL + imgSrc
 
@@ -42,7 +42,7 @@ const ProjectItem = ({data}) => {
       </div>
     </div>      
 
-    <div className="Divider"><div/></div>
+    {showDivider && <div className="Divider"><div/></div> }
   </>)
 }
 

@@ -5,6 +5,8 @@ import Intro from './comps/Intro'
 import Project from './comps/Project';
 import ETC from './comps/ETC';
 import OpenSource from './comps/OpenSource'
+import AboutMe from './comps/AboutMe';
+import Contact from './comps/Contact';
 
 
 
@@ -28,6 +30,8 @@ const App = () => {
       <Project />
       <OpenSource />
       <ETC />
+      <AboutMe />
+      <Contact />
     </div>
   );
 }

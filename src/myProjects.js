@@ -28,7 +28,7 @@ const myProjects = [
     title: "매일감사 매일기도 - 기도응답노트, 감사/기도 편지",
     imgSrc: "/assets/maeil.png",
     tags: "#AWS, #iOS, #Android",
-    desc: "개인 프로젝트. 혼자 만들고 혼자 운영중.\n어떠한 홍보활동도 단한번 한적 없지만, 약 7,000명 이상의 가입자가 사용중이며, 매일 꾸준히 늘고 있으며, 매우 좋은 평점을 유지하고 있는 프로젝트. 편지지에 감사일기나 기도편지를 작성하는 느낌을 최대한 살리고 싶어서 개발. 순수하게 재능기부(?)형식으로 운영하는 것다보니, 아무래도 생업보다 뒷전으로 밀려 업데이트를 많이 못하지만, 애착을 가지고 운영하고 있는 서비스.",
+    desc: "개인 프로젝트. 혼자 만들고 혼자 운영중.\n단 한번도 홍보활동을 한적 없지만, 약 7,000명 이상의 가입자가 사용중이며, 매일 꾸준히 늘고 있으며, 매우 좋은 평점을 유지하고 있는 프로젝트. 편지지에 감사일기나 기도편지를 작성하는 느낌을 최대한 살리고 싶어서 개발. 순수하게 재능기부(?)형식으로 운영하는 것다보니, 아무래도 생업보다 뒷전으로 밀려 업데이트를 많이 못하지만, 애착을 가지고 운영하고 있는 서비스.",
     links: [
       {title: "[개발후기] 매일감사 매일기도 - iOS, Android 앱", url: "https://kokohapps.tistory.com/entry/%EA%B0%9C%EB%B0%9C%ED%9B%84%EA%B8%B0-%EB%A7%A4%EC%9D%BC%EA%B0%90%EC%82%AC-%EB%A7%A4%EC%9D%BC%EA%B8%B0%EB%8F%84-iOS-Android-%EC%95%B1"},
       {title: "iOS - Apple Appstore", url: "https://apps.apple.com/us/app/%EB%A7%A4%EC%9D%BC%EA%B0%90%EC%82%AC-%EB%A7%A4%EC%9D%BC%EA%B8%B0%EB%8F%84-%EA%B8%B0%EB%8F%84%EC%9D%91%EB%8B%B5%EB%85%B8%ED%8A%B8-%EB%A7%A4%EC%9D%BC-%EA%B0%90%EC%82%AC%EC%9D%BC%EA%B8%B0/id1330919615?l=ko&ls=1&mt=8"},
