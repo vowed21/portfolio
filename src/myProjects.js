@@ -1,7 +1,7 @@
 const myProjects = [
   {
     title: "밸류통 Valuetong.com - 부동산 실거래 정보",
-    imgSrc: "/assets/valuetong.jpg",
+    imgSrc: "/assets/vt1.jpg",
     tags: "#AWS, #HybridApp, #React, #MobX, #KakaoMap, #Geometry, #공공데이터포털, #부동산실거래",
     desc: '감정평가사 3분과 함께 만든 프로젝트.\n리액트로 사이트를 만들고, Android 와 iOS 는 웹뷰로 패키징하여 하이브리드앱으로 개발했다. 공공데이터 포털에서 토지정보와 건물정보를 사용했으며, 정확한 지번주소가 공개되지 않는 부동산 실거래 정보를 감정평가사 분들의 비법알고리즘(?)으로 지번주소를 유추 - 매칭하여 지도에 표시해주는 것이 핵심인 서비스이다.\n\n웹(React), 하이브리드 앱(Android, iOS), 서버, 관리자페이지 모두 100% 개발',
     links: [

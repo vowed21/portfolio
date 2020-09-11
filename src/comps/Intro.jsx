@@ -26,9 +26,9 @@ export default class Intro extends React.Component {
   
   render() {
 
-    const backImgUrl = `url(${process.env.PUBLIC_URL}/assets/profile3.jpg)`
+    // const backImgUrl = `url(${process.env.PUBLIC_URL}/assets/profile3.jpg)`
     return (
-      <div id="Intro" style={{backgroundImage:backImgUrl}} ref={this.introRef} >
+      <div id="Intro" ref={this.introRef} >
         <div id="wrap-text" >
           <h1>Developer<br/>김현우</h1>
           {/* <h2>새로운 서비스를 만드는게 제일 좋아</h2> */}

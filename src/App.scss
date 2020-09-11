@@ -5,9 +5,11 @@
 
 #Intro {
   background-size: cover; background-position: right bottom; background-repeat: no-repeat;
+  background-image: url('https://blog.kakaocdn.net/dn/W8dI6/btqIrtNpdZe/aMRH7jsS05FldSr6bMgor1/img.jpg');
   display: flex; align-items: center;
   height: 100vh; color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+  
 
   #wrap-text { 
     text-align: center; width: 100%; 
@@ -23,6 +25,7 @@
   }
 
   @include respond('tablet') { display: block; }
+  @include respond('mobile-large') { background-image: url('https://blog.kakaocdn.net/dn/bbx6G2/btqIzYZTftc/GXqwgz2d8Gcc9lYKq4GHLk/img.jpg'); }
 
 }
 
