@@ -7,13 +7,24 @@
   display: flex; justify-content: space-between; flex-wrap: wrap;;
 }
 .ETCItem {
-  width: 49%; box-sizing: border-box; position: relative; border: 1px solid #ddd; margin: 10px 0;;
-  img { object-fit: cover; width: 100%;;}
+  width: 49%; box-sizing: border-box; position: relative; border: 1px solid #ddd; margin: 10px 0;; font-size: 20px;
+  p { margin: 8px 0;}
+  img { object-fit: cover; width: 100%; object-position: top; }
   .wrap-desc {
     position: absolute; left:0; right:0; bottom: 0; padding: 16px; padding-top: 40px;;
     background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
-    color: white; font-weight: bold;; font-size: 20px;
+    color: white; font-weight: bold;;  text-shadow: 1px 1px 1px black;;
   }
+
+  @include respond('mobile-large') {
+    width: 100%; font-size: 18px;;
+    img {max-height: 360px; }
+  }
+  @include respond('mobile-normal') {
+    font-size: 17px;;
+    img {max-height: 320px; }
+  }
+  
 }
 
 #AboutMe {
@@ -22,14 +33,22 @@
   background-position: center; background-size: cover;;;
   color: white;
   font-size: 20px; font-weight: bold;;;
+
+  a{ color: lightskyblue;}
+
+  @include respond('mobile-large') { font-size: 18px;}
+  @include respond('mobile-normal') { font-size: 16px;}
 }
 
 #Contact {
   padding-bottom: 100px;
   background-color: #262626; color: white;  text-align: center;
-
-  p { font-size: 24px; font-weight: bold;;}
+  font-size: 24px; font-weight: bold;;;
   i { margin-right: 16px;}
   a { color: white; text-decoration: none;}
   a:hover { text-decoration: underline;}
+
+  @include respond('mobile-large') { font-size: 20px;;}
+  @include respond('mobile-normal') { font-size: 18px;;}
+
 }

@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <div id="AboutMe">
       <div className="wrapper">
-        <h1>- About Me -</h1>
+        <h1>About Me</h1>
         <p>김현우</p>
         <p>(주)알려줌 CTO</p>
         <p>라이프팔레트 대표</p>
@@ -19,7 +19,6 @@ const AboutMe = () => {
           <a href="https://www.16personalities.com/ko/%EC%84%B1%EA%B2%A9%EC%9C%A0%ED%98%95-entp" target="_blank" rel="noopener noreferrer" >ENTP</a>
           &nbsp; 두 성향
         </p>
-        <p>실용음악 전공 - 그러나 음악 끊은지 10년</p>
         <p>쌍둥이(남매) 아빠 - 내게 이런 재능이!</p>
         
         

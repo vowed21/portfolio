@@ -15,7 +15,7 @@
     padding: 16px 4%; text-align: center;
     box-sizing: border-box;
 
-    h3 { font-size: 24px; margin-top: 4px;}
+    h3 { font-size: 28px; margin-top: 4px;}
 
     .wrap-language { 
       display: flex; justify-content: center; align-items: center; font-weight: bold;
@@ -24,8 +24,21 @@
       img { width: 24px; height: 24px; margin-right: 4px;}
       i { margin-left: 36px; margin-right: 4px;}
     }
-    .desc { color: #777; min-height: 60px; white-space: pre-wrap; margin-top: 20px; }
+    .desc { color: #777; min-height: 64px; white-space: pre-wrap; margin-top: 20px; }
     a { text-decoration: none;}
+
+    @include respond('mobile-large') {
+      width: 100%;
+      .desc { min-height: 0;}
+      h3 { font-size: 24px; margin-bottom: 16px;}
+      .wrap-language { font-size: 16px;}
+      .desc { font-size: 15px;;}
+    }
+    @include respond('mobile-normal') {
+      h3 { font-size: 22px;}
+      .desc { font-size: 14px;;}
+    }
+
   }
 
 }

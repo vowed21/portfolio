@@ -51,18 +51,13 @@ const OpenSource = () => {
   return (
     <div id="OpenSource">
       <div className="wrapper">
-      <h1>- OpenSource -</h1>
-
-      <div className="wrap-items">
-        {myOpensources.map((data, index) => (
-          <OpenSourceItem data={data} key={index} />
-        ))}
-        
+        <h1>OpenSource</h1>
+        <div className="wrap-items">
+          {myOpensources.map((data, index) => (
+            <OpenSourceItem data={data} key={index} />
+          ))}
+        </div>
       </div>
-
-      </div>
-      
-      
     </div>
   )
 }

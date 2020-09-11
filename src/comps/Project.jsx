@@ -9,7 +9,7 @@ const Project = () => {
   return (
     <div id="Projects">
       <div className="wrapper">
-        <h1>- PROJECTS -</h1>
+        <h1>PROJECTS</h1>
         {myProjects.map((data, index) => (
           <ProjectItem data={data} key={index} showDivider={(index < myProjects.length-1)} />
         ))}      
@@ -32,6 +32,7 @@ const ProjectItem = ({data, showDivider}) => {
         <div className="wrap-title">
           <img src={src} alt={title} />
           <h3>{title}</h3>
+          
         </div>
         <p className="tags">{tags}</p>
         <p className="desc">{desc}</p>

@@ -8,7 +8,7 @@ const ETC = () => {
   return (
     <div id="ETC">
       <div className="wrapper">
-        <h1>- ETC -</h1>
+        <h1>ETC</h1>
         <div className="wrap-patent">
 
           <ETCItem 

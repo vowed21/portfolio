@@ -3,7 +3,9 @@ $width-xl: 1920px;
 $width-lg: 1280px;
 $width-md: 960px;
 $width-tablet: 780px;
+$width-mobile-large: 600px;
 $width-sm: 420px;
+$width-mobile-normal: 380px;
 $width-mobile-compact: 320px;
 
 $headerHeight: 60px;
@@ -16,7 +18,9 @@ $breakpoints: (
   'lg': (max-width: $width-lg),
   'md': (max-width: $width-md),
   'tablet': (max-width: $width-tablet),
+  'mobile-large': (max-width: $width-mobile-large),
   'sm': (max-width: $width-sm),
+  'mobile-normal': (max-width: $width-mobile-normal),        
   'mobile-compact': (max-width: $width-mobile-compact)        
 ) !default;
 
