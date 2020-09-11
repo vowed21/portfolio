@@ -3,15 +3,42 @@
 header {
   position: fixed;  top: 0; left: 0; right: 0; z-index: 1000; ;
   background-color: rgba(0,0,0,0.0); color: white;
+  // box-shadow: 0 1px 8px rgba(0,0,0,0.5);
   .wrap-header {
-    display: flex; align-items: center; 
-    height: $headerHeight;
-  }
-  
+    display: flex; align-items: center;  height: $headerHeight; justify-content: center;
+  }  
   .menu-item { 
-    font-size: 22px; font-weight: normal;  color: #ccc; 
+    font-size: 22px; font-weight: normal;  color: #ddd; 
     margin: 0 20px; cursor: pointer; 
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
   }
   .menu-item:hover,.menu-item.selected { color: white; font-weight: bold; }
+
+  .menu-mobile, .fas { display: none; color: white; margin: 0 4px; cursor: pointer; }
+
+  @include respond('tablet') {
+    .wrap-header { height: $headerHeightMobile;}
+    .menu-item { display: none;}
+    .menu-mobile { display: block; font-size: 20px; font-weight: bold; }
+    .fas { display: inline;}
+  }
+
+  @include respond('mobile-large') {
+    .menu-mobile { font-size: 18px; }
+  }
+
+  .menu-item,.menu-mobile,i{ text-shadow: 1px 1px 2px rgba(0,0,0,0.9); }
+
+
+
+}
+
+
+
+.headerDrawerPaper {
+  background-color: rgba(0,0,0,0.75) !important; color: white !important;;
+}
+
+.drawerItemText {
+  text-align: center !important; font-size: 20px !important; font-weight: bold; justify-content: center !important;
+  padding: 12px 0 !important;
 }

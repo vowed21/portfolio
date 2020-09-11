@@ -1,4 +1,5 @@
 import React from 'react'
+import { Drawer, List, ListItem} from '@material-ui/core'
 import '../styles/header.scss'
 
 const MENU_INTRO = 'Intro'
@@ -22,7 +23,7 @@ export default class Header extends React.Component {
 
   headerMode = HEADER_MODE_TRANSPARENT
   headerRef = React.createRef();
-  state = {selectedMenu: menusArr[0]}
+  state = {selectedMenu: menusArr[0], isDrawerShow: false}
 
   
   elProject; elOpenSource; elETC; elAboutMe; elContact; elBody;
@@ -64,19 +65,21 @@ export default class Header extends React.Component {
       this.headerMode = HEADER_MODE_ALPHA
       const alpha = (offset-datum) / datum * ALPHA_FILLED
       this.headerRef.current.style.backgroundColor = `rgba(0,0,0,${alpha})`
+      this.headerRef.current.style.boxShadow = `none`
       // console.log('헤더 알파')
     }
     else if(offset >= window.innerHeight && this.headerMode !== HEADER_MODE_FILLED) {
       this.headerMode = HEADER_MODE_FILLED
       // console.log('헤더 필드!!!!')
       this.headerRef.current.style.backgroundColor = `rgba(0,0,0,${ALPHA_FILLED})`
+      this.headerRef.current.style.boxShadow = `0 1px 8px rgba(0,0,0,0.7)`
     }
 
     const {selectedMenu} = this.state
 
     //메뉴 선택표시 되게 해주자.
     //맨끝쯤에 왔다면, 무조건 CONTACT 메뉴다.
-    if(offset >= (this.elBody.clientHeight - window.innerHeight - 100)) {
+    if(offset >= (this.elBody.clientHeight - window.innerHeight - 20)) {
       if(selectedMenu !== MENU_CONTACT) {
         this.setState({selectedMenu: MENU_CONTACT})
       }
@@ -111,21 +114,25 @@ export default class Header extends React.Component {
         this.setState({selectedMenu: MENU_CONTACT})
       }
     }
+  }
 
-    
-
-
+  scrollToMenu = (menuTitle) => {
+    const el = document.querySelector('#'+menuTitle)
+    if(el) {
+      window.scrollTo(0, el.offsetTop - this.headerRef.current.offsetHeight)
+    }
+    this.setState({selectedMenu: menuTitle, isDrawerShow: false})
 
   }
+
+
+
+
 
   MenuItem = ({title}) => {
 
     const clickItem = () => {
-      const el = document.querySelector('#'+title)
-      if(el) {
-        window.scrollTo(0, el.offsetTop - this.headerRef.current.offsetHeight)
-        this.setState({selectedMenu: title})
-      }
+      this.scrollToMenu(title)
     }
     
     let className = "menu-item"
@@ -138,17 +145,37 @@ export default class Header extends React.Component {
     )
   }
 
+  drawerOpen = () => { this.setState({isDrawerShow: true}) }
+  drawerClose = () => { this.setState({isDrawerShow: false}) }
+
 
   render() {
 
     console.log('렌더러')
 
+    const {selectedMenu, isDrawerShow} = this.state
+
     return (
       <header ref={this.headerRef} >
         <div className="wrapper wrap-header">
-          <div style={{flexGrow:'1'}} />
+          {/* <div style={{flexGrow:'1'}} /> */}
           {menusArr.map((title, index) => (<this.MenuItem title={title} key={index} />))}
+          
+          <div onClick={this.drawerOpen} className="menu-mobile">{selectedMenu}</div>
+          <i onClick={this.drawerOpen} className="fas fa-angle-down"/>
+          
         </div>
+        <Drawer open={isDrawerShow} onClose={this.drawerClose}  anchor="top" classes={{paper:'headerDrawerPaper'}} >
+          <List>
+            {menusArr.map((title, index) => (
+              <ListItem button className="drawerItemText" onClick={()=> {this.scrollToMenu(title)}} >
+                {title}
+              </ListItem>
+            ))}
+
+          </List>
+
+        </Drawer>
       </header>
     )
   }

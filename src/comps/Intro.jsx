@@ -26,7 +26,7 @@ export default class Intro extends React.Component {
   
   render() {
 
-    const backImgUrl = `url(${process.env.PUBLIC_URL}/assets/profile1.jpg)`
+    const backImgUrl = `url(${process.env.PUBLIC_URL}/assets/profile3.jpg)`
     return (
       <div id="Intro" style={{backgroundImage:backImgUrl}} ref={this.introRef} >
         <div id="wrap-text" >
