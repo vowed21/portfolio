@@ -20,7 +20,7 @@ const Project = () => {
 
 
 const ProjectItem = ({data, showDivider}) => {
-  const {title, imgSrc, tags, desc, links } = data
+  const {title, imgSrc, tags, desc, links, contrib } = data
   const src = process.env.PUBLIC_URL + imgSrc
 
   return ( <>
@@ -34,9 +34,11 @@ const ProjectItem = ({data, showDivider}) => {
           <h3>{title}</h3>
           
         </div>
-        <p className="tags">{tags}</p>
+        <p className="contrib">{contrib}</p>
         <p className="desc">{desc}</p>
+        <p className="tags">{tags}</p>
 
+        <div className="link-header" ><i className="fas fa-caret-down"/> 개발 내용 상세보기 <i className="fas fa-caret-down"/></div>
         {links.map((item, index) => (
           <MyLink title={item.title} url={item.url} key={index} />
         ))}

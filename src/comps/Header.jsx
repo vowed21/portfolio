@@ -59,13 +59,13 @@ export default class Header extends React.Component {
     if(offset < datum && this.headerMode !== HEADER_MODE_TRANSPARENT) {
       this.headerRef.current.style.backgroundColor = 'transparent';
       this.headerMode = HEADER_MODE_TRANSPARENT
+      this.headerRef.current.style.boxShadow = `none`
       // console.log('헤더 트랜스 파렌트!!!')
     }
     else if (offset >= datum && offset < window.innerHeight) {
       this.headerMode = HEADER_MODE_ALPHA
       const alpha = (offset-datum) / datum * ALPHA_FILLED
       this.headerRef.current.style.backgroundColor = `rgba(0,0,0,${alpha})`
-      this.headerRef.current.style.boxShadow = `none`
       // console.log('헤더 알파')
     }
     else if(offset >= window.innerHeight && this.headerMode !== HEADER_MODE_FILLED) {
