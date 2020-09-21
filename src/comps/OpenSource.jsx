@@ -81,7 +81,7 @@ const OpenSourceItem = ({data}) => {
 
       <p className="desc" > {desc}</p>
       <a href={url} target="_blank" rel="noopener noreferrer" >
-        <Button color="primary" variant="contained" size="large" startIcon={<i class="fab fa-github" />} >View On GitHub</Button>
+        <Button color="primary" variant="contained" size="large" startIcon={<i className="fab fa-github" />} >View On GitHub</Button>
       </a>
     </div>
   )
